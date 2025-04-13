@@ -1,0 +1,383 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFDEE2;
+    color: #333;
+    line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Header Styles */
+  .header {
+    position: relative;
+    text-align: center;
+    padding: 64px 16px;
+  }
+  
+  .sparkles-container {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  
+  .sparkle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #E8CAAC;
+    border-radius: 50%;
+    animation: sparkle 4s ease-in-out infinite;
+  }
+  
+  .birthday-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #FF719A, #E8CAAC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .header-hearts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #FF719A;
+  }
+  
+  .italic-text {
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+  
+  /* Card Styles */
+  .birthday-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(232, 202, 172, 0.3);
+    overflow: hidden;
+    margin: 32px auto;
+    max-width: 768px;
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: #FF719A;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .card-content {
+    font-size: 1.125rem;
+  }
+  
+  .message-text {
+    margin-bottom: 16px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .highlight {
+    font-weight: 500;
+    color: #FF719A;
+  }
+  
+  .semibold {
+    font-weight: 600;
+  }
+  
+  /* Gradients */
+  .soft-pink-gradient {
+    background: linear-gradient(135deg, rgba(255, 222, 226, 0.8), rgba(255, 255, 255, 0.9));
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, rgba(253, 225, 211, 0.8), rgba(255, 255, 255, 0.9));
+  }
+  
+  /* Icon Styles */
+  .heart {
+    width: 24px;
+    height: 24px;
+    background-color: #FF719A;
+    position: relative;
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-color: #FF719A;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .heart:before {
+    top: -12px;
+    left: 0;
+  }
+  
+  .heart:after {
+    top: 0;
+    left: -12px;
+  }
+  
+  .star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    margin-bottom: 1.2em;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0.7em solid #E8CAAC;
+    border-left: 0.3em solid transparent;
+    transform-origin: bottom center;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .star:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0.45em;
+    left: -0.8em;
+    border-right: 0.8em solid transparent;
+    border-bottom: 0.6em solid #E8CAAC;
+    border-left: 0.8em solid transparent;
+    transform: rotate(-35deg);
+  }
+  
+  .star:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0.45em;
+    left: -0.8em;
+    border-right: 0.8em solid transparent;
+    border-bottom: 0.6em solid #E8CAAC;
+    border-left: 0.8em solid transparent;
+    transform: rotate(35deg);
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .gift-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 24px;
+    background-color: #FF719A;
+    position: relative;
+    border-radius: 4px;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .gift-icon:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    width: 16px;
+    height: 10px;
+    background-color: #FF719A;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .gift-icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 14px;
+    width: 4px;
+    height: 32px;
+    background-color: white;
+  }
+  
+  /* Button Styles */
+  .btn-shine {
+    position: relative;
+    padding: 12px 32px;
+    background-color: #E8CAAC;
+    color: #FF719A;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-shine:hover {
+    background-color: #FF719A;
+    color: white;
+  }
+  
+  .btn-shine:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%) skewX(30deg);
+    transition: all 1s ease-out;
+  }
+  
+  .btn-shine:hover:after {
+    transform: translateX(50%);
+  }
+  
+  /* Hidden Message */
+  .hidden-message {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  
+  .hidden-message.revealed {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 24px;
+  }
+  
+  .special-message {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Signature */
+  .signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .signature-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /* Confetti */
+  .confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    animation: confetti-fall 4s ease-out forwards;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes confetti-fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(1000%) rotate(720deg); opacity: 0; }
+  }
+  
+  @keyframes float-heart {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-80px) scale(0); opacity: 0; }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .birthday-title {
+      font-size: 2.5rem;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .card-content, .message-text {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .birthday-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.25rem;
+    }
+    
+    .birthday-card {
+      padding: 24px;
+    }
+  }
